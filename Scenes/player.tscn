@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://btcoovr3exmgx"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_1rfs3"]
+[ext_resource type="Texture2D" uid="uid://c7g0j2virep56" path="res://Assets/Space shooter/plane.png" id="1_3wxwt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qdn6"]
+radius = 62.0
+height = 172.0
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_1rfs3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("1_3wxwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-19, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7qdn6")
