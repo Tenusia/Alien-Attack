@@ -12,4 +12,4 @@ texture = ExtResource("1_8evvw")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_31aij")]
-position = Vector2(677, 349)
+position = Vector2(164, 355)
