@@ -1,11 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://btcoovr3exmgx"]
+[gd_scene load_steps=5 format=3 uid="uid://btcoovr3exmgx"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1rfs3"]
 [ext_resource type="Texture2D" uid="uid://c7g0j2virep56" path="res://Assets/Space shooter/plane.png" id="1_3wxwt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qdn6"]
-radius = 62.0
+radius = 22.0
 height = 172.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73hcg"]
+size = Vector2(128, 64)
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -20,5 +23,10 @@ texture = ExtResource("1_3wxwt")
 position = Vector2(-19, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_7qdn6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-50, 2.20537e-06)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_73hcg")
 
 [node name="RocketContainer" type="Node" parent="."]
