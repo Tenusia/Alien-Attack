@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var moveSpeed = 400
 var rocket_scene = preload("res://Scenes/rocket.tscn")
+@onready var rocket_container = $RocketContainer
 
 func _process(delta):
 	if Input.is_action_just_pressed("shoot"):
@@ -26,5 +27,6 @@ func _physics_process(delta):
 
 func shoot():
 	var rocket_instance = rocket_scene.instantiate()
-	add_child(rocket_instance)
+	rocket_container.add_child(rocket_instance)
+	rocket_instance.global_position = global_position
 	rocket_instance.global_position.x += 90

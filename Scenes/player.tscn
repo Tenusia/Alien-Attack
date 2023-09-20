@@ -20,3 +20,5 @@ texture = ExtResource("1_3wxwt")
 position = Vector2(-19, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_7qdn6")
+
+[node name="RocketContainer" type="Node" parent="."]
