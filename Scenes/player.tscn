@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://btcoovr3exmgx"]
+[gd_scene load_steps=6 format=3 uid="uid://btcoovr3exmgx"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1rfs3"]
 [ext_resource type="Texture2D" uid="uid://c7g0j2virep56" path="res://Assets/Space shooter/plane.png" id="1_3wxwt"]
+[ext_resource type="AudioStream" uid="uid://53qaaabof45g" path="res://Assets/audio/sfx_laser2.wav" id="3_urxqj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7qdn6"]
 radius = 22.0
@@ -31,3 +32,6 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_73hcg")
 
 [node name="RocketContainer" type="Node" parent="."]
+
+[node name="RocketShotSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_urxqj")
