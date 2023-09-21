@@ -19,8 +19,8 @@ func _on_deathzone_area_entered(area):
 	area.queue_free()
 
 func _on_player_took_damage():
-	lives -= 1
 	player_dmg_sound.play()
+	lives -= 1
 	hud.set_lives(lives)
 	if lives == 0:
 		player.die()
